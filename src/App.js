@@ -1,20 +1,6 @@
 import './App.css';
-
-const emojiList = [
-  {
-    value: '👊',
-    name: 'punch'
-  },
-  {
-    value: '🤘',
-    name: 'rocking'
-  },
-  {
-    value: '👋',
-    name: 'greetings'
-  }
-]
-
+// import emojiList from './data/emojis.json';
+import { emojis } from './utils/constants/emojis';
 const isLoggedIn = true;
 
 const App = ()  => {
@@ -26,7 +12,7 @@ const App = ()  => {
       <p>I am Wrinting JSX</p>
       {isLoggedIn && (
         <ul>
-        {emojiList.map(emoji => (
+        {emojis.map(emoji => (
           <li>
             <button onClick={displayEmojiName}>
               <span role="img" aria-label={emoji.name} id={emoji.name}>{emoji.value}</span>
